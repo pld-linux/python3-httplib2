@@ -1,18 +1,5 @@
---- httplib2-0.12.0/python2/httplib2/certs.py~	2018-11-14 05:40:05.000000000 +0100
-+++ httplib2-0.12.0/python2/httplib2/certs.py	2018-11-16 06:34:12.392370656 +0100
-@@ -19,9 +19,7 @@ except ImportError:
-     pass
- 
- 
--BUILTIN_CA_CERTS = os.path.join(
--    os.path.dirname(os.path.abspath(__file__)), "cacerts.txt"
--)
-+BUILTIN_CA_CERTS = "/etc/pki/tls/certs/ca-bundle.crt"
- 
- 
- def where():
---- httplib2-0.12.0/python3/httplib2/certs.py~	2018-11-14 05:40:05.000000000 +0100
-+++ httplib2-0.12.0/python3/httplib2/certs.py	2018-11-16 06:34:27.006133962 +0100
+--- httplib2-0.12.0/httplib2/certs.py~	2018-11-14 05:40:05.000000000 +0100
++++ httplib2-0.12.0/httplib2/certs.py	2018-11-16 06:34:27.006133962 +0100
 @@ -19,9 +19,7 @@ except ImportError:
      pass
  
