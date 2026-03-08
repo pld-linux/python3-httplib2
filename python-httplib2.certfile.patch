@@ -11,3 +11,14 @@
  
  
  def where():
+--- httplib2-0.31.2/tests/test_cacerts_from_env.py.orig	2026-01-23 11:59:34.000000000 +0100
++++ httplib2-0.31.2/tests/test_cacerts_from_env.py	2026-03-08 12:43:21.583096954 +0100
+@@ -9,7 +9,7 @@ import tempfile
+ import httplib2
+ 
+ 
+-CA_CERTS_BUILTIN = os.path.join(os.path.dirname(httplib2.__file__), "cacerts.txt")
++CA_CERTS_BUILTIN = "/etc/pki/tls/certs/ca-bundle.crt"
+ CERTIFI_CERTS_FILE = "unittest_certifi_file"
+ CUSTOM_CA_CERTS = "unittest_custom_ca_certs"
+ 
