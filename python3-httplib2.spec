@@ -1,21 +1,21 @@
 #
 # Conditional build:
-%bcond_with	doc	# Sphinx documentation (as of 0.31.2, built docs already in sdist)
+%bcond_with	doc	# Sphinx documentation (prebuilt docs are included in the sdist)
 %bcond_without	tests	# unit tests
 
 Summary:	A comprehensive HTTP client library
 Summary(pl.UTF-8):	Obszerna biblioteka klienta HTTP
 Name:		python3-httplib2
-Version:	0.31.2
+Version:	0.32.0
 Release:	1
 License:	MIT
 Group:		Development/Languages/Python
 #Source0Download: https://github.com/httplib2/httplib2/releases
 Source0:	https://github.com/httplib2/httplib2/archive/v%{version}/httplib2-%{version}.tar.gz
-# Source0-md5:	91d637093d5e7634c7c886c5cc982970
+# Source0-md5:	e1957615f10320440973e5f36e5d8fed
 Patch0:		python-httplib2.certfile.patch
 URL:		https://github.com/httplib2/httplib2
-BuildRequires:	python3-modules >= 1:3.6
+BuildRequires:	python3-modules >= 1:3.8
 BuildRequires:	python3-setuptools
 %if %{with tests}
 BuildRequires:	python3-PySocks >= 1.7.1
@@ -35,7 +35,7 @@ BuildRequires:	rpmbuild(macros) >= 1.714
 BuildRequires:	sphinx-pdg-3
 %endif
 Requires:	ca-certificates
-Requires:	python3-modules >= 1:3.6
+Requires:	python3-modules >= 1:3.8
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
